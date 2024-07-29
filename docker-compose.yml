@@ -1,4 +1,5 @@
-version: '3'
+# version is obsolete 対応でversionをコメントアウト
+# version: '3'
 services:
   db:
     # この行を追加 20230222 --start--
