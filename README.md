@@ -239,3 +239,12 @@ docker-compose up --build
 - Reactアプリケーション内で、APIリクエストを行う際には、`/api/` プレフィックスを使用してリクエストを送信します。
 
 これで、LaravelとReactの開発環境がDockerで構築され、両者がNginxを通じて連携するようになります。各サービスのログやエラーメッセージを確認しながら、開発を進めてください。
+
+## Architecture (temporary)
+
+- React: localhost:3000
+- Laravel API: localhost:8080 (Sail)
+- Nginx: removed for simplicity (can be reintroduced later)
+- DB: MariaDB
+
+※ 現在はアプリ開発優先のためシンプル構成にしている
