@@ -1,21 +1,16 @@
-function MoodList() {
+import { useEffect, useState } from 'react';
+import API_BASE_URL from "../api/client";
 
-    const moods = [
-        {
-            id: 1,
-            record_date: '2026-08-06',
-            mood_score: 4,
-            condition_score: 3,
-            memo: '散歩した'
-        },
-        {
-            id: 2,
-            record_date: '2026-08-05',
-            mood_score: 2,
-            condition_score: 2,
-            memo: '疲れた'
-        }
-    ];
+function MoodList() {
+    const [moods, setMoods] = useState([]);
+
+    useEffect(() => {
+      fetch(`${API_BASE_URL}/moods`)
+        .then((response) => response.json())
+        .then((data) => {
+          setMoods(data);
+        });
+    }, []);
 
     return (
         <div>
